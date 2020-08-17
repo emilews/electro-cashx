@@ -1,17 +1,12 @@
 import React from 'react';
-import './App.css';
-
-import Logo from './Logo/Logo';
-import TestFs from './model/TestFs';
+import Routes from  './routes/Routes';
+import { SnackbarProvider } from 'notistack';
 
 const App: React.FC = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <Logo />
-        <textarea className="App" value={TestFs.getDirectoryListing()} readOnly rows={20} />
-      </header>
-    </div>
+    <SnackbarProvider>
+      <Routes />
+    </SnackbarProvider>
   );
 }
 
