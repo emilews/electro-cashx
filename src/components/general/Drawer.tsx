@@ -22,7 +22,7 @@ createStyles({
     },
     menuButton: {
         marginRight: theme.spacing(2),
-      },
+      }, 
 }));
 
 type Anchor = 'left';

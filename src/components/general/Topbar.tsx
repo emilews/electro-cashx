@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import NavMenu from './Drawer';
+import * as Store from '../../utils/Store';
+
 
 
 const useStyles = makeStyles((theme: Theme) =>
@@ -18,7 +20,15 @@ const useStyles = makeStyles((theme: Theme) =>
 );
 
 export default function Topbar() {
+    const [balance, setBalance] = useState(0);
+    useEffect(() => {
+        Store.getBalance().then((response:number) => {
+            setBalance(response);
+        })
+    },[])
     const classes = useStyles();
+
+
 
     return (
         <div className={classes.root}>
@@ -26,7 +36,7 @@ export default function Topbar() {
                 <Toolbar variant="dense">
                     <NavMenu />
                     <Typography variant="h6" color="inherit">
-                        Photos
+                        {balance}
                      </Typography>
                 </Toolbar>
             </AppBar>
