@@ -50,6 +50,8 @@
     "react-dom": "^16.11.0",
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.2.0",
+    "terser": "^5.2.0",
+    "terser-webpack-plugin": "^4.1.0",
     "typescript": "3.6.4"
   },
   "repository": {
