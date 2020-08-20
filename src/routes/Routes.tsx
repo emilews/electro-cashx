@@ -1,7 +1,7 @@
 import React from "react";
-import { Route, BrowserRouter as Router, Redirect } from "react-router-dom";
+import { Route, BrowserRouter as Router } from "react-router-dom";
 import TopBar from "../components/general/Topbar";
-import Home from '../components/home/Home';
+import HomeContainer from './HomeContainer';
 
 const PrivateRoute: React.FC<{
 	component: React.FC;
@@ -16,7 +16,7 @@ const Routes: React.FC = () => {
 	const renderRoutes = () => {
 		return (
 			<div>
-				<PrivateRoute exact path="/" component={Home} />
+				<PrivateRoute exact path="/" component={HomeContainer} />
 			</div>
 		)
 	}
