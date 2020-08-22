@@ -35,3 +35,7 @@ If you'd like to help you can do it in the [Flipstarter](http://electrocashxfund
 If you want to help directly, then have my BCH address, and thank you so much!
 
 Address: bitcoincash:qqkc6zp9tqu7pt6asuljm4j6n427prqnucyythr5at
+
+## Development
+
+If you want to build this or help with some PR, then to start head to [here.](https://github.com/emilews/electro-cashx/blob/master/dev.md)
